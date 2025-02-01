@@ -1,5 +1,8 @@
 from engine import Deck, Player
 
+""" Main game loop """
+
+
 def main():
     deck = Deck()
     player1 = Player("Player 1")
@@ -16,10 +19,11 @@ def main():
         current_player.draw_card(deck)
         print(f"Your hand: {[str(card) for card in current_player.hand]}")
 
-
         while True:
             try:
-                card_index = int(input(f"Choose a card to play (0-{len(current_player.hand) - 1}): "))
+                card_index = int(
+                    input(f"Choose a card to play (0-{len(current_player.hand) - 1}): ")
+                )
                 if 0 <= card_index < len(current_player.hand):
                     break
                 else:
@@ -33,12 +37,11 @@ def main():
         if played_card.name == "Princess":
             print(f"{current_player.name} discarded the Princess and lost!")
             break
-        
-
 
         current_player, other_player = other_player, current_player
 
     print("Game over!")
+
 
 if __name__ == "__main__":
     main()
