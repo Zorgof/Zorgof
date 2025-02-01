@@ -1,6 +1,7 @@
 # Ignore virtual environment directory
 .venv/
 venv/
+princess_the_game_venv/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -29,8 +30,26 @@ MANIFEST
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+
+# Ignore virtual environment files
+*.cfg
+activate
+*.csh
+*.fish
+*.ps1
+pip
+pip3
+pip3.*
+python
+python3
+python3.*
+
+# Ignore binary files
+python
+python3
+
+# Ignore header files
+*.h
 
 # Installer logs
 pip-log.txt
